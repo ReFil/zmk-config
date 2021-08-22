@@ -56,5 +56,6 @@
 				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &kp RALT  &to 0 &kp K_CMENU &kp RCTRL
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			};
 	};
 };
