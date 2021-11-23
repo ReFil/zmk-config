@@ -17,3 +17,23 @@ After editing the keymap file upload it to the original folder using the "Add fi
  	![alt text](rowcolmap.png)
   The matrix transform can be found in bt60.dts, more information on how to do the matrix transforms can be found in the official ZMK documentation [here](https://zmkfirmware.dev/docs/development/new-shield#optional-matrix-transform)
   We're always willing to accept pull requests if you've developed your own layouts :)
+
+# Local builds
+
+Steps taken from [ZMK Development Setup](https://zmk.dev/docs/development/setup). Commands have been provided where the steps differ from the documentation. Tested on Ubuntu 20.04.
+
+1. [Install prerequisites](https://zmk.dev/docs/development/setup#prerequisites)
+2. [Install `west`](https://zmk.dev/docs/development/setup#west-installation)
+3. [Install toolchain](https://zmk.dev/docs/development/setup#toolchain-installation)
+4. [Initialize West]([Initialize West](https://zmk.dev/docs/development/setup#initialize-west))
+    ```
+    west init -l config
+    ```
+5. [Update To Fetch Modules](https://zmk.dev/docs/development/setup#update-to-fetch-modules)
+6. [Export Zephyr™ Core](https://zmk.dev/docs/development/setup#export-zephyr-core)
+7. [Install Zephyr Python Dependencies](https://zmk.dev/docs/development/setup#install-zephyr-python-dependencies)
+8. Build the firmware 
+    ```
+    west build -s zmk/app -b bt60 -- -DZMK_CONFIG="$(pwd)/config"
+    ```
+9. Built firmware will be `build/zephyr/zmk.uf2`
