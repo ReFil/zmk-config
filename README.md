@@ -25,7 +25,7 @@ Steps taken from [ZMK Development Setup](https://zmk.dev/docs/development/setup)
 1. [Install prerequisites](https://zmk.dev/docs/development/setup#prerequisites)
 2. [Install `west`](https://zmk.dev/docs/development/setup#west-installation)
 3. [Install toolchain](https://zmk.dev/docs/development/setup#toolchain-installation)
-4. [Initialize West]([Initialize West](https://zmk.dev/docs/development/setup#initialize-west))
+4. [Initialize West](https://zmk.dev/docs/development/setup#initialize-west)
     ```
     west init -l config
     ```
