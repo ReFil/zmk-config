@@ -34,6 +34,6 @@ Steps taken from [ZMK Development Setup](https://zmk.dev/docs/development/setup)
 7. [Install Zephyr Python Dependencies](https://zmk.dev/docs/development/setup#install-zephyr-python-dependencies)
 8. Build the firmware 
     ```
-    west build -s zmk/app -b bt60 -- -DZMK_CONFIG="$(pwd)/config"
+    west build -s zmk/app -b bt60_v1 -- -DZMK_CONFIG="$(pwd)/config"
     ```
 9. Built firmware will be `build/zephyr/zmk.uf2`
