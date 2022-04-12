@@ -1,6 +1,8 @@
 # zmk-config
-This is the ZMK-Config repo for the Polarity works BT60 keyboard, with this you can customise your layout and keymap to suit your exact needs.
+This is the ZMK-Config repo for the Polarity works BT60 V1 keyboard, with this you can customise your layout and keymap to suit your exact needs.
 We have provided base keymaps for the following layouts: ANSI, ISO, Split backspace and right shift, Tsangan and all 1u bottom rows. These can be accessed by choosing the appropriate branch. 
+
+THIS IS NOT THE REPO FOR THE V2/BT65/BT75, those files can be accessed [here](https://github.com/PolarityWorks/zmk-config-ckp)
 
 # Customisation
 In order to change the keymap to meet your needs, you will need a GitHub account. Click the "fork" button in the top right to create your own version of the repo, then use the drop down menu to select the branch with your layout.
