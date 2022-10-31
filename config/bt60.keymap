@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
@@ -7,8 +6,7 @@
     macros {
         emoji: emoji {
             label = "emoji";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,keymap";
             bindings
                 = <&kp LCTR &kp LGUI &kp SPACE>;
         };
