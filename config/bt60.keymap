@@ -3,14 +3,44 @@
 #include <dt-bindings/zmk/bt.h>
 / {
     macros {
-        emojis: emojis {
-            label = "Emoji Key";
+        w_emojis: w_emojis {
+            label = "Windows Emojis";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        m_emojis: m_emojis {
+            label = "Mac Emojis";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL &kp LGUI>
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LCTRL &kp LGUI>
+                ;
+        };
+	w_screenshot: w_screenshot {
+            label = "Windows Screenshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LSHIFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LGUI &kp LSHIFT>
+                ;
+        };
+	m_screenshot: m_screenshot {
+            label = "Mac Screenshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LCTRL &kp LSHIFT>
+                , <&macro_tap &kp 4>
+                , <&macro_release &kp LGUI &kp LCTRL &kp LSHIFT>
                 ;
         };
     };
@@ -25,24 +55,31 @@
 				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   |    |
 				// | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
 				// |  SHIFT    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |      SHIFT     |
-				// |  CTL  |  WIN  |  ALT  |            SPACE               | ALT | WIN    |  MENU    |  1    |
+				// |  CTL  |  WIN  |  ALT  |            SPACE               | ALT | SCREENSHOT | EMOJIS | FN |
 				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp  N8   &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC &bt BT_CLR
 				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT  &kp BSLH
 				&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K    &kp  L  &kp SEMI &kp SQT           &kp RET
 				&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH             &kp RSHFT
-				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &kp RALT  &emojis &kp K_CMENU &mo 2
+				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &kp RALT  &w_screenshot &w_emojis &mo 2
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 		macOS {
+				// ------------------------------------------------------------------------------------------
+				// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   | DEL
+				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   |    |
+				// | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
+				// |  SHIFT    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |      SHIFT     |
+				// |  ALT  |  CTRL  |  CMD  |            SPACE               | ALT | SCREENSHOT | EMOJIS | FN |
+				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp  N8   &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC &bt BT_CLR
 				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT  &kp BSLH
 				&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K    &kp  L  &kp SEMI &kp SQT           &kp RET
 				&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH             &kp RSHFT
-				&kp LALT &kp LCTRL &kp LGUI            &kp SPACE                          &kp RALT  &kp RGUI &kp K_CMENU &mo 2
+				&kp LALT &kp LCTRL &kp LGUI            &kp SPACE                          &kp RALT  &m_screenshot &m_emojis &mo 2
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
