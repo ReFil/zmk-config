@@ -9,7 +9,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL &kp LGUI>
-                , <&macro_tap &space>
+                , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LCTRL &kp LGUI>
                 ;
         };
