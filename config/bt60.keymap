@@ -26,7 +26,7 @@
 		raise {
 			bindings = <
 				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &bt BT_CLR &trans
-				&trans &tog 0 &tog 2 &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
+				&trans &to 0 &to 2 &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
 				&trans    &trans &trans &trans &trans &trans &trans &trans &trans &kp PG_UP &kp HOME  &trans   &bootloader
 				&kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &kp C_MUTE &trans &trans &trans &kp PG_DN &kp END &kp UP  &kp C_NEXT
 				&bt BT_PRV &bt BT_NXT  &trans              &trans                            &kp LEFT   &kp DOWN   &kp RIGHT  &trans
