@@ -3,17 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    macros {
-        emoji: emoji {
-            label = "emoji";
-            compatible = "zmk,keymap";
-            bindings
-                = <&kp LCTR &kp LGUI &kp SPACE>;
-        };
-    };
-};
-
-/ {
 	keymap {
 		compatible = "zmk,keymap";
 
