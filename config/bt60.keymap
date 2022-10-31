@@ -3,14 +3,14 @@
 #include <dt-bindings/zmk/bt.h>
 / {
     macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
+        emojis: emojis {
+            label = "Emoji Key";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
+                = <&macro_press &kp LCTRL &kp LGUI>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LCTRL &kp LGUI>
                 ;
         };
     };
