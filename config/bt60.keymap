@@ -33,14 +33,14 @@
                 , <&macro_release &kp LGUI &kp LSHIFT>
                 ;
         };
-	m_screenshot: m_screenshot {
+        m_screenshot: m_screenshot {
             label = "Mac Screenshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp LSHIFT>
-                , <&macro_tap &kp 4>
-                , <&macro_release &kp LGUI &kp LSHIFT>
+                = <&macro_press &kp LCTRL &kp LGUI &kp LSHIFT>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LCTRL &kp LGUI &kp LSHIFT>
                 ;
         };
     };
