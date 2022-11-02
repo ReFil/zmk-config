@@ -43,7 +43,7 @@
                 , <&macro_release &kp LCTRL &kp LGUI &kp LSHIFT>
                 ;
         };
-	w_screenshot: w_s_screenshot {
+	w_screenshot: w_screenshot {
             label = "Windows Full Screenshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
