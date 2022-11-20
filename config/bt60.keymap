@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BT_SEL 0>
+                = <&bt BT_SEL 1>
 		, <&to 0>
                 ;
         };
@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&bt BT_SEL 1>
+                = <&bt BT_SEL 2>
 		, <&to 1>
                 ;
         };
