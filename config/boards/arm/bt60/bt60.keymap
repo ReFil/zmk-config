@@ -4,8 +4,6 @@
 
 #define RAISE 1
 #define LOWER 2
-#define GAME 3
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -23,7 +21,7 @@
 				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT  &kp BSLH
 				&mo LOWER  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K    &kp  L  &kp SEMI &kp SQT           &kp RET
 				&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH             &mt RSHFT UP
-				&kp LCTRL &kp LGUI &kp LALT            &lt LOWER SPACE                          &kp RALT  &lt RAISE LEFT &mt K_CMENU DOWN &mt RCTRL RIGHT
+				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &kp RALT  &lt RAISE LEFT &mt K_CMENU DOWN &mt RCTRL RIGHT
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
@@ -47,16 +45,6 @@
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
-		GAME {
-				
-			bindings = <
-				&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp  N8   &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC &bt BT_CLR
-				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT  &kp BSLH
-				&mo LOWER  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K    &kp  L  &kp SEMI &kp SQT           &kp RET
-				&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH             &kp RSHFT
-				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &kp RALT  &to 0 &kp K_CMENU &kp RCTRL
-			>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-			};
+		
 	};
 };
