@@ -124,17 +124,17 @@
 		function {
 				// ------------------------------------------------------------------------------------------
 				// |  `  | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |  BT_CLR  |
-				// |      |     |     |     |     |     |     |     | INS |     | PSC | SLCK | PSBK | RESET |
+				// |      | MAC | WIN |     |     |     |     |     | INS |     | PSC | SLCK | PSBK | RESET |
 				// |       |     |     |     |     |     |     |     |     | PGUP | HOM |     |    BOOTL    |
 				// |         | PREV | PP | NEXT | VLDN | VLUP | MUTE |     | PGDN | END | UP |              |
-				// | MAC | WIN |      |                                  |  LEFT  |  DOWN  |  RGHT  |       |
+				// |     |     |      |                                  |  LEFT  |  DOWN  |  RGHT  |       |
 				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12 &bt BT_CLR &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
+				&trans &m_connect &w_connect &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
 				&trans    &trans &trans &trans &trans &trans &trans &trans &trans &kp PG_UP &kp HOME  &trans   &bootloader
 				&trans &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &kp PG_DN &kp END &kp UP  &trans
-				&m_connect &w_connect  &trans              &trans                            &kp LEFT &kp DOWN &kp RIGHT &trans
+				&trans &trans  &trans              &trans                            &kp LEFT &kp DOWN &kp RIGHT &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
